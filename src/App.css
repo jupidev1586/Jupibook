@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.App {
+  color: rgb(24, 24, 24);
+  display: flex;
+  font-size: 0.9rem;
+  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App__friends {
+  color: lightgrey;
+  padding: 20px;
+}
+
+.App_messages {
+  margin-top: 80px;
+  padding: 20px;
+  width: 100%;
+}
+
+
+.App__friends {
+  order: 2;
+  width: 100%;
+}
+.App_messages {
+  order: 1
+}
+
+@media (min-width: 600px) {
+  .App {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .App_messages {
+    width: 400px;
+  }
+  .App__friends {
+    width: auto;
+    margin-top: 80px;
+    order: 1
+  }
+  .App_messages {
+    order: 2
+  }
+
+}
+
+.flexDiv { 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filterSearch { 
+  padding: 10px;
+  margin-bottom: 20px;
+}

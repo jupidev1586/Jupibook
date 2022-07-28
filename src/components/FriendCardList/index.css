@@ -1,0 +1,8 @@
+.FriendCardList{
+  display: block;
+  margin: 20px 0
+}
+
+.FriendCardList .Button {
+  margin-bottom: 10px;
+}
