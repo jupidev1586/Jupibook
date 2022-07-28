@@ -1,6 +1,6 @@
 import './index.css';
 
-const Button = ({btnTextContent="Click", color, bgColor, width, type="button", onHandleClick=(() => {})}) => {
+const Button = ({btnTextContent="Click", color, bgColor, fontSize='16px', width, type="button", onHandleClick=(() => {})}) => {
   const styles = {
     backgroundColor: bgColor,
     borderRadius: '4px',
@@ -9,7 +9,7 @@ const Button = ({btnTextContent="Click", color, bgColor, width, type="button", o
     display:'inline-block',
     color:color,
     fontWeight: 'bold',
-    fontSize: '16px'
+    fontSize: fontSize
   }
   return (
     <button onClick={onHandleClick} type={type} className="Button" style={ styles }>{ btnTextContent }</button>

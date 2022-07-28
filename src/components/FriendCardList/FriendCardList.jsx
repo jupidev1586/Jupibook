@@ -17,12 +17,12 @@ const FriendCardList = ({filterMsgFriends}) => {
     <div className="FriendCardList">
       {
         filterBtnVisible 
-        && <Button color='#ccc' width="100%" onHandleClick={ 
+        && <Button color='#333' fontSize='12px' width="100%" onHandleClick={ 
           () => {
             filterMsgFriends('')
             setFilterBtnVisible(false)
           }
-        } btnTextContent='Clear Filter' bgColor='ghostwhite'/>
+        } btnTextContent='CLEAR FILTER' bgColor='ghostwhite'/>
       }
       {
         friendList.length
