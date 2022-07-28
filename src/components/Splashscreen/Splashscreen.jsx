@@ -7,6 +7,7 @@ const Splashscreen = ({onHandleClick}) => {
 
   const onGetUsername = () => {
     localStorage.setItem('username', usernameInput);
+    console.log(localStorage.getItem('username'))
     onHandleClick(false);
   }
 
@@ -23,7 +24,7 @@ const Splashscreen = ({onHandleClick}) => {
           placeholder="Nome ..."
           required
         />
-        <Button type="submit" bgColor='#6a3c34' color="white" btnTextContent="Continua"/>
+        <Button type="submit" bgColor='#6a3c34' color="white" btnTextContent="Login"/>
       </form>
     </div>
   )

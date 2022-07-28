@@ -8,6 +8,7 @@ const ListItem = ({link="/", title}) => {
   )
 }
 
+
 const Navbar = () => {
   const linkList = [
     {
@@ -29,6 +30,11 @@ const Navbar = () => {
       id: 4,
       title: localStorage.getItem('username') || 'no-user',
       url: '#'
+    },
+    {
+      id: 5,
+      title: 'LOGOUT',
+      url: localStorage.removeItem('username')
     }
   ]
 
@@ -37,7 +43,7 @@ const Navbar = () => {
       <div className="container">
         <nav className="Navbar__nav">
           <img src="/logo.png" alt="" className="logo" width="45" />
-          <ul className="list-unstyled">
+          <ul className="list-unstyled Navbar__nav__menu">
             {
               linkList.map(link => <ListItem title={link.title} link={link.url} key={link.id}/>)
             }
