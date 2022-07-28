@@ -14,7 +14,7 @@ const Splashscreen = ({onHandleClick}) => {
     <div className="Splashscreen">
       <form className="Splashscreen__form" onSubmit={onGetUsername}>
         <img src="/logo.png" alt="Logo App" />
-        <h2>Come ti chiami?</h2>
+        <h2>What's your name?</h2>
         <input
           value={usernameInput}
           onChange={(e) => setUsernameInput(e.target.value)}
