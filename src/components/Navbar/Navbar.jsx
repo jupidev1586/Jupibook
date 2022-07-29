@@ -39,7 +39,7 @@ const Navbar = ({ onLogoutClick }) => {
   const BtnItem = () => {
     return (
       <li className="ListItem">
-        <button className="ListItem__link" onClick={ onLogout }>LOGOUT</button>
+        <button className="ListItem__btn" onClick={ onLogout }>LOGOUT</button>
       </li>
     )
   }
@@ -68,6 +68,7 @@ const Navbar = ({ onLogoutClick }) => {
     <header className="Navbar__header">
       <img src="/logo.png" alt="" className="logo" width="45" />
       <div className="d-flex">
+        <FontAwesomeIcon icon="fa-solid fa-user" />
         <UserItem />
         <FontAwesomeIcon icon="fa-solid fa-bars"  onClick={ () => handleOpen('right') } />
       </div>

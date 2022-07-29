@@ -37,23 +37,4 @@
   /* text-align: center; */
 }
 
-/* .Navbar__nav__menu li:nth-child(4) { 
-  background: tomato;
-  border: 1px solid tomato;
-  margin-right: 2px;
-}
-
-.Navbar__nav__menu li:nth-child(5) { 
-  background: tomato;
-  border: 1px solid tomato;
-  cursor: pointer;
-}
-.Navbar__nav__menu li:nth-child(4) a ,
-.Navbar__nav__menu li:nth-child(5) a { 
-  color: white;
-}
-.Navbar__nav__menu li:nth-child(5):hover { 
-  background: rgb(167, 64, 46);
-  border: 1px solid rgb(167, 64, 46);
-  box-shadow: 0 0 0 0 rgb(167 64 46);
-} */
+.ListItem__btn { background: tomato; color: white; padding: 5px 10px}
