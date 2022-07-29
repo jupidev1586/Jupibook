@@ -7,6 +7,9 @@ const AddMessage = ({ isRenderedList, onAddButton }) => {
   // Controlled component!!! - Forms e input
   const [messageText, setMessageText] = useState('');
 
+
+  const dateTime = `${new Date().getDay().toString().padStart(2, '0')}.${new Date().getMonth().toString().padStart(2, '0')}.${new Date().getFullYear()} - ${new Date().getHours()}:${new Date().getMinutes().toString().padStart(2, '0')}`;
+  
   const onFormSubmit = (e) => {
     e.preventDefault();
 
@@ -14,7 +17,7 @@ const AddMessage = ({ isRenderedList, onAddButton }) => {
       POST('messages', {
         text: messageText,
         sender: localStorage.getItem('username') || 'Generic',
-        date: new Date().toLocaleDateString()
+        date: dateTime
       })
       .then(() => {
         setMessageText('');
