@@ -31,7 +31,7 @@ function App() {
         isSplashscreenVisibile
         ? <Splashscreen onHandleClick={setSplashscreenVisibility}/>
         : <>
-        <Navbar />
+          <Navbar onLogoutClick={setSplashscreenVisibility} />
           <div className="App__friends">
             <h3>My friends</h3>
             <FriendCardList isRenderedList={isRenderedList} filterMsgFriends={setFilterValue} searchValue={filterValue} />

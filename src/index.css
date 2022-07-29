@@ -91,11 +91,15 @@ ul {
   transform: translateX(10px);
 }
 .rs-drawer-body {
-  padding: 15px 25px 15px 15px;
+  padding: 15px 25px 15px 15px !important
 }
+.rs-drawer-left.rs-drawer-xs, .rs-drawer-right.rs-drawer-xs {
+  width: 300px !important
+}
+
 /* RESET RSUITE SIDENAV */
 
-
+.tc-bold { font-weight: bold }
 .tc-red {
   color: #E03535;
 }
@@ -126,6 +130,10 @@ ul {
   .d-lg-flex {
     display: flex;
   }
+}
+.d-flex {
+  display: flex;
+  gap: 20px
 }
 .text-center {
   text-align: center;

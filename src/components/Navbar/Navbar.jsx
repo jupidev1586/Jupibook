@@ -1,7 +1,6 @@
 
 import { useState } from 'react'; 
-import { Drawer, ButtonToolbar, IconButton } from 'rsuite';
-import AngleLeftIcon from '@rsuite/icons/legacy/AngleLeft';
+import { Drawer } from 'rsuite';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './index.css';
@@ -13,9 +12,14 @@ const ListItem = ({link="/", title}) => {
     </li>
   )
 }
+const UserItem = () => {
+  return (
+    <span className="ListItem__link tc-bold">{localStorage.getItem('username') || 'no-user'}</span>
+  )
+}
 
 
-const Navbar = () => {
+const Navbar = ({ onLogoutClick }) => {
 
   const [size, setSize] = useState('xs');
   const [open, setOpen] = useState(false);
@@ -26,6 +30,19 @@ const Navbar = () => {
     setPlacement(key);
   };
 
+  const onLogout = () => {
+    const logout = localStorage.removeItem('username');
+    onLogoutClick(true);
+    return logout
+  }
+  
+  const BtnItem = () => {
+    return (
+      <li className="ListItem">
+        <button className="ListItem__link" onClick={ onLogout }>LOGOUT</button>
+      </li>
+    )
+  }
 
   const linkList = [
     {
@@ -42,23 +59,19 @@ const Navbar = () => {
       id: 3,
       title: 'Contacts',
       url: '#'
-    },
-    {
-      id: 4,
-      title: localStorage.getItem('username') || 'no-user',
-      url: '#'
-    },
-    {
-      id: 5,
-      title: 'LOGOUT',
-      url: localStorage.removeItem('username')
     }
   ]
 
-    return (
+  
+
+  return (
     <header className="Navbar__header">
       <img src="/logo.png" alt="" className="logo" width="45" />
-      <FontAwesomeIcon icon="fa-solid fa-bars"  onClick={() => handleOpen('right')} />
+      <div className="d-flex">
+        <UserItem />
+        <FontAwesomeIcon icon="fa-solid fa-bars"  onClick={ () => handleOpen('right') } />
+      </div>
+      
       <Drawer size={size} placement={placement} open={open} onClose={() => setOpen(false)}>
         <Drawer.Header>
           <Drawer.Title>MENU</Drawer.Title>
@@ -68,14 +81,22 @@ const Navbar = () => {
           
           <ul className="list-unstyled Navbar__nav__menu">
             {
-              linkList.map(link => <ListItem title={link.title} link={link.url} key={link.id}/>)
+              linkList.map(link => <ListItem 
+                title={link.title} 
+                link={link.url} 
+                key={link.id}
+              />)
             }
+            <BtnItem />
           </ul>
         </nav>
         </Drawer.Body>
       </Drawer>
     </header>
   )
+
+
+
 }
 
 export default Navbar;
