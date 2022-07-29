@@ -13,7 +13,7 @@ const AddFriend = ({ isRenderedList, onAddButton }) => {
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    if (friendName) {
+    if (friendName && friendPhoto) {
       
       POST('friends', {
         name: friendName,
@@ -21,7 +21,7 @@ const AddFriend = ({ isRenderedList, onAddButton }) => {
       })
       .then(() => {
         setFriendName('');
-        // setFriendPhoto('');
+        setFriendPhoto('');
         onAddButton(!isRenderedList);
       })
     }

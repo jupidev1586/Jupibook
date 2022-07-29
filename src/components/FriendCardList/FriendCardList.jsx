@@ -11,7 +11,7 @@ const FriendCardList = ({filterMsgFriends}) => {
 
   useEffect(() => {
     GET('friends').then(data => setFriendList(data));
-  }, [isRenderedList]);
+  }, [friendList, isRenderedList]);
 
   return (
     <div className="FriendCardList">
@@ -20,7 +20,7 @@ const FriendCardList = ({filterMsgFriends}) => {
         && <Button color='#333' fontSize='12px' width="100%" onHandleClick={ 
           () => {
             filterMsgFriends('')
-            setFilterBtnVisible(false)
+            setFilterBtnVisible(false);
           }
         } btnTextContent='CLEAR FILTER' bgColor='ghostwhite'/>
       }

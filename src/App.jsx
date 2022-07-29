@@ -16,7 +16,7 @@ library.add(fas);
 
 function App() {
   const [isRenderedList, setRenderedList] = useState(false);
-  const [searchValue, setSearchValue] = useState();
+  const [filterValue, setFilterValue] = useState();
   const [isSplashscreenVisibile, setSplashscreenVisibility] = useState(true);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function App() {
         <Navbar />
           <div className="App__friends">
             <h3>My friends</h3>
-            <FriendCardList isRenderedList={isRenderedList} filterMsgFriends={setSearchValue} searchValue={searchValue} />
+            <FriendCardList isRenderedList={isRenderedList} filterMsgFriends={setFilterValue} searchValue={filterValue} />
             <h4>Add a friend</h4>
             <AddFriend isRenderedList={ isRenderedList } onAddButton={ setRenderedList } />
           </div>
@@ -43,9 +43,9 @@ function App() {
             <AddMessage isRenderedList={ isRenderedList } onAddButton={ setRenderedList }/>
             <div className="flexDiv">
               <h4>Search by friend</h4>
-              <input onChange={(e) => setSearchValue(e.target.value)} type="text" className="filterSearch" placeholder="Type a friend name..."></input>
+              <input onChange={(e) => setFilterValue(e.target.value)} type="text" className="filterSearch" placeholder="Type a friend name..."></input>
             </div>
-            <MessageCardList filterValue={searchValue} isRenderedList={ isRenderedList } setRenderedList={setRenderedList}/>
+            <MessageCardList filterValue={filterValue} isRenderedList={ isRenderedList } setRenderedList={setRenderedList}/>
           </div>
         </>
       }

@@ -11,8 +11,8 @@ const FriendCard = ({ friendData, onHandleClick, setRenderedList }) => {
       .then(() => setRenderedList(prev => !prev))
 
   return (
-    <div className="FriendCard" onClick={onHandleClick}>
-      <h3 className="FriendCard__name">{ name }</h3>
+    <div className="FriendCard">
+      <h3 className="FriendCard__name" onClick={onHandleClick}>{ name }</h3>
       <img className="FriendCard__photo" src={ photo } alt={ name } />
       <button onClick={() => onHandleDelete(id)} className="FriendCard__btn">
         <FontAwesomeIcon icon="fa-solid fa-xmark" />
