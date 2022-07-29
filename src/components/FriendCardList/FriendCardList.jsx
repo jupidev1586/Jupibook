@@ -29,7 +29,7 @@ const FriendCardList = ({filterMsgFriends}) => {
     <div className="FriendCardList">
       <ButtonToolbar>
         <IconButton icon={<AngleRightIcon />} onClick={() => handleOpen('left')}>
-          My friends
+          OPEN DRAWER
         </IconButton>
       </ButtonToolbar>
       <Drawer size={size} placement={placement} open={open} onClose={() => setOpen(false)}>
@@ -57,7 +57,6 @@ const FriendCardList = ({filterMsgFriends}) => {
           }
         </Drawer.Body>
       </Drawer>
-      
     </div>
   )
 }

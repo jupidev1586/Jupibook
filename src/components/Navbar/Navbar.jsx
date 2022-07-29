@@ -1,3 +1,9 @@
+
+import { useState } from 'react'; 
+import { Drawer, ButtonToolbar, IconButton } from 'rsuite';
+import AngleLeftIcon from '@rsuite/icons/legacy/AngleLeft';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import './index.css';
 
 const ListItem = ({link="/", title}) => {
@@ -10,6 +16,17 @@ const ListItem = ({link="/", title}) => {
 
 
 const Navbar = () => {
+
+  const [size, setSize] = useState('xs');
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState();
+
+  const handleOpen = key => {
+    setOpen(true);
+    setPlacement(key);
+  };
+
+
   const linkList = [
     {
       id: 1,
@@ -40,16 +57,23 @@ const Navbar = () => {
 
     return (
     <header className="Navbar__header">
-      <div className="container">
+      <img src="/logo.png" alt="" className="logo" width="45" />
+      <FontAwesomeIcon icon="fa-solid fa-bars"  onClick={() => handleOpen('right')} />
+      <Drawer size={size} placement={placement} open={open} onClose={() => setOpen(false)}>
+        <Drawer.Header>
+          <Drawer.Title>MENU</Drawer.Title>
+        </Drawer.Header>
+        <Drawer.Body>
         <nav className="Navbar__nav">
-          <img src="/logo.png" alt="" className="logo" width="45" />
+          
           <ul className="list-unstyled Navbar__nav__menu">
             {
               linkList.map(link => <ListItem title={link.title} link={link.url} key={link.id}/>)
             }
           </ul>
         </nav>
-      </div>
+        </Drawer.Body>
+      </Drawer>
     </header>
   )
 }

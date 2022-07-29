@@ -25,7 +25,7 @@ body {
   color: #333;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #A10F15 !important;
   transition: all 0.3s ease;
 }
@@ -72,6 +72,26 @@ ul {
 }
 .rs-btn-icon-with-text.rs-btn.rs-btn-icon-placement-left {
   font-weight: bold !important;
+}
+.rs-btn-icon-with-text.rs-btn.rs-btn-icon-placement-left {
+  padding: 8px 0 8px 0;
+  background: tomato;
+  color: white;
+}
+.rs-btn-icon-with-text>.rs-icon,
+.rs-btn-icon-with-text:focus>.rs-icon {
+  background-color: transparent !important;
+}
+.rs-btn svg.rs-icon,
+.rs-btn svg.rs-icon { 
+  transition: all 0.5s ease-in-out
+}
+.rs-btn svg.rs-icon:hover,
+.rs-btn:hover svg.rs-icon {
+  transform: translateX(10px);
+}
+.rs-drawer-body {
+  padding: 15px 25px 15px 15px;
 }
 /* RESET RSUITE SIDENAV */
 
