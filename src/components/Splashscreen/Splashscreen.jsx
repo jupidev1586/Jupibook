@@ -21,7 +21,7 @@ const Splashscreen = ({onHandleClick}) => {
           onChange={(e) => setUsernameInput(e.target.value)}
           className="Splashscreen__form--input"
           type="text"
-          placeholder="Nome ..."
+          placeholder="Type your name..."
           required
         />
         <Button type="submit" bgColor='#6a3c34' color="white" btnTextContent="Login"/>
