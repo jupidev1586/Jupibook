@@ -32,7 +32,7 @@ a {
 a:hover {
   color: #E03535;
 }
-input { font-family:'Open Sans', sans-serif;}
+input { font-family:'Open Sans', sans-serif; color: #333 !important}
 
 /* RESET RSUITE SIDENAV */
 h1, h2, h3, h4, h5, h6 {
@@ -133,7 +133,7 @@ ul {
 }
 .d-flex {
   display: flex;
-  gap: 20px
+  gap: 10px
 }
 .text-center {
   text-align: center;

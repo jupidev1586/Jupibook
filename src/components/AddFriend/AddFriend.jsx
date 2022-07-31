@@ -8,8 +8,6 @@ const AddFriend = ({ isRenderedList, onAddButton }) => {
   const [friendName, setFriendName] = useState('');
   const [friendPhoto, setFriendPhoto] = useState('');
 
-
-
   const onFormSubmit = (e) => {
     e.preventDefault();
 

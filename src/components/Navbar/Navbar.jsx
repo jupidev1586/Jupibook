@@ -66,7 +66,7 @@ const Navbar = ({ onLogoutClick }) => {
 
   return (
     <header className="Navbar__header">
-      <img src="/logo.png" alt="" className="logo" width="45" />
+      <img src="/logoipsum-logo-14.svg" alt="" className="logo" width="45" />
       <div className="d-flex">
         <FontAwesomeIcon icon="fa-solid fa-user" />
         <UserItem />

@@ -8,15 +8,25 @@
   color: white;
 }
 
+.Splashscreen__header {
+  margin: 10px 0 0 !important;
+}
+
+.Splashscreen__header--h3 {
+  margin: 0 0 20px !important;
+}
+
 .Splashscreen__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
-.Splashscreen__form--input {
+.Splashscreen__form--input,
+.Splashscreen__form__photo
+{
   padding: 10px 10px 10px 6px;
   border: 0;
   border-radius: 6px;
