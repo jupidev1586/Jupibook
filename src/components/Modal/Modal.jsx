@@ -14,10 +14,16 @@ const Modal = ({modalTextContent, onModalConfirm, setModalVisibility}) => {
 
   return (
     <div className="Modal">
-      <h5>{ modalTextContent }</h5>
-      <div className="Modal__btns mt-2">
-        <Button onHandleClick={onCancelBtn} btnTextContent="Annulla" bgColor="lightcoral" type="button" />
-        <Button onHandleClick={onConfirmBtn} btnTextContent="Conferma" bgColor="lightseagreen" type="button" />
+      <div className="Modal__overlay"></div>
+      <div className="Modal__content">
+        <div className="Modal_header">
+          <h5>{ modalTextContent }</h5>
+        </div>
+        
+        <div className="Modal__btns mt-2">
+          <Button onHandleClick={onCancelBtn} btnTextContent="Annulla" bgColor="lightcoral" type="button" />
+          <Button onHandleClick={onConfirmBtn} btnTextContent="Conferma" bgColor="lightseagreen" type="button" />
+        </div>
       </div>
     </div>
   )
