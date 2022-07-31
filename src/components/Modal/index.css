@@ -1,15 +1,42 @@
 .Modal {
   position: fixed;
-  top: calc(50% - 50px);
-  height: 140px;
+  top: 0;
+  height: 100%;
   padding: 20px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 4px rgb(0 0 0 / 35%);
   border-radius: 8px;
   background-color: ghostwhite;
-  z-index: 9;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
+.Modal__overlay {
+  content:"";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-color: rgba(63, 58, 58, 0.8);
+}
+
+.Modal__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 150px;
+  max-width: 350px;
+  margin: 20% auto 0;
+  z-index: 3;
+  background: white;
+}
 .Modal__btns {
   display: flex;
   gap: 10px;
 }
+

@@ -96,7 +96,21 @@ ul {
 .rs-drawer-left.rs-drawer-xs, .rs-drawer-right.rs-drawer-xs {
   width: 300px !important
 }
-
+.rs-drawer-header {
+  background: tomato;
+}
+.rs-drawer-header .rs-btn-icon.rs-btn-sm>.rs-icon {
+  color: white;
+}
+.rs-drawer-header .rs-btn-subtle.rs-btn-active, 
+.rs-drawer-header .rs-btn-subtle:active,
+.rs-drawer-header .rs-btn-subtle:focus, .rs-drawer-header  .rs-btn-subtle:hover
+{
+  color: #272c36;
+  color: var(--rs-btn-subtle-active-text);
+  background-color: #e5e5ea;
+  background-color: #f44336;
+}
 /* RESET RSUITE SIDENAV */
 
 .tc-bold { font-weight: bold }
