@@ -13,7 +13,7 @@ const Splashscreen = ({onHandleClick}) => {
     localStorage.setItem('username', usernameInput);
     console.log(localStorage.getItem('username'))
     onHandleClick(false);
-    if (usernameInput && friendPhoto) {
+    if (usernameInput) {
       
       POST('friends', {
         name: usernameInput,
@@ -42,10 +42,9 @@ const Splashscreen = ({onHandleClick}) => {
         <input
         className="Splashscreen__form__photo"
           type="text"
-          placeholder="Photo url..."
+          placeholder="Photo url...(optional)"
           value={ friendPhoto }
           onChange={(e) => setFriendPhoto(e.target.value)}
-          required
         />
         <Button type="submit" bgColor='#6a3c34' color="white" btnTextContent="Login"/>
       </form>
