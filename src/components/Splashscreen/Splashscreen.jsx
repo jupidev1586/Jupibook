@@ -28,9 +28,9 @@ const Splashscreen = ({onHandleClick}) => {
   return (
     <div className="Splashscreen">
       <form className="Splashscreen__form" onSubmit={onFormSubmit}>
-        <img src="/logoipsum-logo-14.svg" alt="Logo App" />
+        <img src="/logoipsum-logo-14.svg" alt="Logo App" /> <span><b>Jupibook</b></span>
         <h2 className="Splashscreen__header">What's your name?</h2>
-        <h3 className="Splashscreen__header Splashscreen__header--h3">Insert your name and a photo url</h3>
+        <h3 className="Splashscreen__header Splashscreen__header--h3">Insert your name and a optional photo url</h3>
         <input
           value={usernameInput}
           onChange={(e) => setUsernameInput(e.target.value)}

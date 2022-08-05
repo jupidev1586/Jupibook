@@ -11,3 +11,18 @@
 .AddFriend__photo {
   padding: 10px
 }
+
+.AddFriend__flexDiv { 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  order: 1
+}
+.AddFriend__flexDiv button::before { 
+  content: "";
+  background: url('../../../public/user-astronaut-solid.png');
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  background-size: contain;
+}

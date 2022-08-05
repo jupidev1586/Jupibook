@@ -37,6 +37,8 @@ const FriendCardList = ({filterMsgFriends}) => {
           <Drawer.Title>My friends</Drawer.Title>
         </Drawer.Header>
         <Drawer.Body>
+          <p>Click on a friendcard to filter messages in your feed.</p>
+          <br />
           {
             filterBtnVisible 
             && <Button color='#333' fontSize='12px' width="100%" onHandleClick={ 

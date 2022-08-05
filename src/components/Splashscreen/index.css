@@ -14,6 +14,8 @@
 
 .Splashscreen__header--h3 {
   margin: 0 0 20px !important;
+  font-size: 14px !important;
+  font-weight: 400;
 }
 
 .Splashscreen__form {

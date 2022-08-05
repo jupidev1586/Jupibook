@@ -1,12 +1,12 @@
 import './index.css';
 
-const Button = ({btnTextContent="Click", color, bgColor, fontSize='16px', width, type="button", onHandleClick=(() => {})}) => {
+const Button = ({children, btnTextContent="Click", color, bgColor, fontSize='16px', width, type="button", onHandleClick=(() => {})}) => {
   const styles = {
     backgroundColor: bgColor,
     borderRadius: '4px',
     width: width,
     textAlign:'center',
-    display:'inline-block',
+    display:'inherit',
     color:color,
     fontWeight: 'bold',
     fontSize: fontSize

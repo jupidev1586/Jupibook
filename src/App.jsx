@@ -34,7 +34,7 @@ function App() {
           <Navbar onLogoutClick={setSplashscreenVisibility} />
           <div className="App__friends">
             <h3>My friends</h3>
-            <p>Filter by friend clicking on one of them.</p>
+            <p className="mt-1">Filter by friend.</p>
             <FriendCardList isRenderedList={isRenderedList} filterMsgFriends={setFilterValue} searchValue={filterValue} />
             <h4>Add a friend</h4>
             <AddFriend isRenderedList={ isRenderedList } onAddButton={ setRenderedList } />

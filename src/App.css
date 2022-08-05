@@ -14,23 +14,24 @@
 }
 
 .App__friends {
-  color: lightgrey;
+  /* color: lightgrey; */
   padding: 20px;
 }
 
 .App_messages {
-  margin-top: 80px;
   padding: 20px;
   width: 100%;
 }
 
 
 .App__friends {
-  order: 2;
+  order: 1;
   width: 100%;
+  margin-top: 80px;
 }
 .App_messages {
-  order: 1
+  order: 2;
+  margin-top: 0
 }
 
 @media (min-width: 600px) {
@@ -40,10 +41,10 @@
   }
   .App_messages {
     width: 400px;
+    margin-top: 80px
   }
   .App__friends {
     width: auto;
-    margin-top: 80px;
     order: 1
   }
   .App_messages {

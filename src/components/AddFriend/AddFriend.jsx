@@ -7,6 +7,7 @@ const AddFriend = ({ isRenderedList, onAddButton }) => {
   // Controlled component!!! - Forms e input
   const [friendName, setFriendName] = useState('');
   const [friendPhoto, setFriendPhoto] = useState('');
+  
 
   const onFormSubmit = (e) => {
     e.preventDefault();
@@ -43,8 +44,8 @@ const AddFriend = ({ isRenderedList, onAddButton }) => {
         onChange={(e) => setFriendPhoto(e.target.value)}
         required
       />
-      <div className="flexDiv">
-        <Button type="submit" btnTextContent='ADD FRIEND' bgColor='tomato' color='white' width='100%'/>
+      <div className="AddFriend__flexDiv">
+        <Button type="submit" btnTextContent='ADD A FRIEND' bgColor='tomato' color='white' width='100%' />
       </div>
       
     </form>
