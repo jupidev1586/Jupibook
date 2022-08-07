@@ -18,8 +18,8 @@
 
 .FriendCard__photo {
   width: 75px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
   filter: saturate(0.5);
 }
 
