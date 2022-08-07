@@ -23,3 +23,7 @@
   transform: rotate(-180deg);
 } 
 
+.MessageCardList button:active:before
+{
+  transform: rotate(180deg);
+}

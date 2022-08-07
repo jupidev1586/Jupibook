@@ -25,5 +25,16 @@
   width: 25px;
   margin-right: 5px;
   background-size: 80%;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  transition: all .35s ease;
+}
+
+.AddFriend__flexDiv button:hover:before
+{
+  transform: scale(1.1)
+}
+
+.AddFriend__flexDiv button:active:before
+{
+  transform: scale(1)
 }
