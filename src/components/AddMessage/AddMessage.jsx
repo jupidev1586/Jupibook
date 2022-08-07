@@ -46,7 +46,7 @@ const AddMessage = ({ isRenderedList, onAddButton }) => {
         required
       /> */}
       <div className="AddMessage__flexDiv">
-      <Button type="submit" btnTextContent='POST' bgColor='tomato' color='white' width='100%'/>
+      <Button type="submit" btnTextContent='POST' bgColor='tomato' display='flex' color='white' width='100%'/>
       </div>
       
     </form>

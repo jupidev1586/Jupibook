@@ -45,7 +45,7 @@ const AddFriend = ({ isRenderedList, onAddButton }) => {
         required
       />
       <div className="AddFriend__flexDiv">
-        <Button type="submit" btnTextContent='ADD A FRIEND' bgColor='tomato' color='white' width='100%' />
+        <Button type="submit" btnTextContent='ADD A FRIEND' bgColor='tomato' display='flex' color='white' width='100%' />
       </div>
       
     </form>

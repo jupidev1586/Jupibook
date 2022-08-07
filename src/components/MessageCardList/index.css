@@ -4,3 +4,22 @@
   gap: 10px;
   /* background: white; */
 }
+
+.MessageCardList button {
+  align-items: center;
+} 
+
+.MessageCardList button::before {
+  content: "";
+  background: url('../../../public/fa-duotone-fa-arrows-rotate.png');
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  background-size: contain;
+  transition: all 0.35s ease;
+} 
+
+.MessageCardList button:hover::before {
+  transform: rotate(-180deg);
+} 
+

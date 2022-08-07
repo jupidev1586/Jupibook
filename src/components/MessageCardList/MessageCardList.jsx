@@ -24,7 +24,7 @@ const MessageCardList = ({ isRenderedList, setRenderedList, filterValue }) => {
 
   return (
     <div className="MessageCardList">
-      <Button btnTextContent="UPDATE FEED" width='100%' fontSize='12px' bgColor='#ccc' color={'tomato'} onHandleClick={() => setRenderedList(!isRenderedList)}/>
+      <Button btnTextContent="UPDATE FEED" width='100%' fontSize='16x' bgColor='#ccc' display='flex' color={'tomato'} onHandleClick={() => setRenderedList(!isRenderedList)}/>
       {
         messageList.length
         ? messageList.map(message => <MessageCard isRenderedList={isRenderedList} onDeleteBtn={setRenderedList} textContent={ message } key={ message.id }/>)

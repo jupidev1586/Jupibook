@@ -46,7 +46,7 @@ const Splashscreen = ({onHandleClick}) => {
           value={ friendPhoto }
           onChange={(e) => setFriendPhoto(e.target.value)}
         />
-        <Button type="submit" bgColor='#6a3c34' color="white" btnTextContent="Login"/>
+        <Button type="submit" display={'block'} bgColor='#6a3c34' color="white" btnTextContent="Login"/>
       </form>
     </div>
   )
