@@ -10,6 +10,8 @@ const AddMessage = ({ isRenderedList, onAddButton }) => {
 
   const dateTime = `${new Date().getDay().toString().padStart(2, '0')}.${new Date().getMonth().toString().padStart(2, '0')}.${new Date().getFullYear()} - ${new Date().getHours()}:${new Date().getMinutes().toString().padStart(2, '0')}`;
   
+  
+
   const onFormSubmit = (e) => {
     e.preventDefault();
 
@@ -23,6 +25,7 @@ const AddMessage = ({ isRenderedList, onAddButton }) => {
         setMessageText('');
         // setSender('');
         onAddButton(!isRenderedList);
+        console.log(dateTime)
       })
     }
   }
@@ -46,7 +49,7 @@ const AddMessage = ({ isRenderedList, onAddButton }) => {
         required
       /> */}
       <div className="AddMessage__flexDiv">
-      <Button type="submit" btnTextContent='POST' bgColor='tomato' display='flex' color='white' width='100%'/>
+        <Button type="submit" btnTextContent='POST' bgColor='tomato' display='flex' color='white' width='100%'/>
       </div>
       
     </form>

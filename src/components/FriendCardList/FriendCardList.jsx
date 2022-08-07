@@ -13,7 +13,7 @@ const FriendCardList = ({filterMsgFriends}) => {
 
   useEffect(() => {
     GET('friends').then(data => setFriendList(data));
-  }, [friendList, isRenderedList]);
+  }, [isRenderedList]);
 
 
   const [size, setSize] = useState('xs');
